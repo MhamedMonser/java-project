@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div>
+            <a class="navbar-brand" href="#">{{getTitle()}}</a>
+        </div>
+
+        <div>
+            <a class=" btn btn-secondary " [routerLink]="['/home']">Home</a>
+            <a class=" btn btn-secondarbtn btn-secondar" [routerLink]="['/home']" (click)="logout()">Log Out</a>
+        </div>
+
+    </div>
+</nav>

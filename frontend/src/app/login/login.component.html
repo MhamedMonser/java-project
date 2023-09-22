@@ -1,0 +1,55 @@
+
+<div class="lcontainer">
+  <!-- partial:index.partial.html -->
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <img src="../assets/img/login.gif" alt="">
+
+      </div>
+    </div>
+    
+    
+      <div class="right">
+      <h1>Login</h1>
+     
+      <div class="inputs">
+        <form *ngIf="loginForm" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" class="form-control">
+            <div *ngIf="formSubmitted && loginForm.get('email')?.invalid" class="text-danger">
+              <div *ngIf="loginForm.get('email')?.hasError('required')">Email is required</div>
+              <div *ngIf="loginForm.get('email')?.hasError('email')">Please enter a valid email</div>
+            
+          </div>
+      
+         
+            <label for="password">Password</label>
+            <input type="password" formControlName="password">
+            <div *ngIf="formSubmitted && loginForm.get('password')?.invalid" class="text-danger">
+              <div *ngIf="loginForm.get('password')?.hasError('required')">Password is required</div>
+              <div *ngIf="loginForm.get('password')?.hasError('minlength')">Password must be at least 8 characters</div>
+            
+          </div>
+      
+          <button type="submit" >Login</button>
+          <div *ngIf="formSubmitted && loginError" class="text-danger">Incorrect email or password</div>
+        </form>
+      </div>
+  
+        
+      <div class="remember-me--forget-password">
+          <!-- Angular -->
+    <label class="label">
+      <input type="checkbox" name="item" />
+      <span class="text-checkbox">Remember me</span>
+    </label>
+        <p>forget password?</p>
+      </div>
+      <p>Don't have an account? <a  [routerLink]="['/register']" >Create Your Account</a> it takes less than a minute</p>
+    </div>
+    
+  </div>
+  </div>
+  <!-- partial -->

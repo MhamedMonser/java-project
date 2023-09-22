@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+p{
+    width: 155px;
+}

@@ -1,0 +1,31 @@
+/* Style for the list of videos */
+.video-list {
+    list-style: none; /* Remove bullet points for the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  /* Style for each video item */
+  .video-item {
+    display: inline-block; /* Display videos side by side */
+    margin-right: 20px; /* Add some spacing between videos */
+    border: 2px solid #ddd; /* Add a border around each video item */
+    padding: 10px; /* Add padding inside each video item */
+    background-color: #f9f9f9; /* Set a background color for each video item */
+    border-radius: 5px; /* Add rounded corners to each video item */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to each video item */
+  }
+  
+  /* Style for the video player */
+  .video-player {
+    width: 320px; /* Set the width of the video player */
+    height: auto; /* Let the height adjust proportionally */
+    display: block; /* Ensure the video player is displayed as a block element */
+  }
+  
+  /* Optional: Style for the video list heading */
+  h2 {
+    font-size: 24px; /* Set the font size for the heading */
+    margin-bottom: 20px; /* Add spacing below the heading */
+  }
+  

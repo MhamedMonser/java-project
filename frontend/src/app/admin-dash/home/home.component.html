@@ -1,0 +1,91 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="dashboard ">
+
+                <div class="dash-content">
+                    <div class="overview">
+
+
+                        <div class="boxes">
+                            <div class="box box1" style="background-color: rgb(56 165 255);">
+                                <i class="material-symbols-outlined">
+                                    11
+                                </i>
+                                <span class="number">Accounts</span>
+
+                            </div>
+
+                            <div class="box box3" style="background-color: rgb(218, 223, 228);">
+                                <i class="material-symbols-outlined">
+                                    8
+                                </i>
+                                <span class="number">Translators</span>
+
+                            </div>
+
+                        </div>
+                        <div class="boxes">
+
+                            <div class="box box2" style="background-color: rgb(218, 223, 228);">
+                                <i class="material-symbols-outlined">
+                                    3
+                                </i>
+                                <span class="number">Users</span>
+                            </div>
+
+                            <div class="box box2" style="background-color: rgb(56 165 255);">
+                                <i class="material-symbols-outlined">
+                                    11
+                                </i>
+                                <span class="number">Videos</span>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="header">
+                            <h4 class="title">List of job offers</h4>
+                        </div>
+                        <div class="content table-responsive table-full-width">
+                            <table id="myTable" class="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="col-md-1">ID</th>
+                                        <th class="col-md-2">NAME</th>
+                                        <th class="col-md-2">TITLE</th>
+                                        <th class="col-md-3">LOCATION</th>
+                                        <th class="col-md-5">ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let offer of offers">
+                                        <td>{{ offer.id }}</td>
+                                        <td>{{ offer.user.userName }}</td>
+                                        <td>{{ offer.title }}</td>
+                                        <td>Online</td>
+
+                                        <td>
+                                            <div class="d-flex">
+
+                                                <button class="btn btn-success mx-3"
+                                                    (click)="deleteUser()">Accept</button>
+                                                <button class="btn btn-danger mx-3"
+                                                    (click)="deleteUser()">Reject</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

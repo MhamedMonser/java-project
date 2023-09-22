@@ -1,0 +1,373 @@
+
+
+
+
+
+
+
+<main id="theme-main">
+<app-navbar></app-navbar>
+
+  <section id="asign-banner"
+    class="asign-banner-img-contained asign-colour-scheme-light-blue asign-banner-txt-left colour-shade py-5 py-lg-6">
+
+
+    <div class="container">
+      <div class="d-flex colour-scheme-wrapper with-pseudo">
+        <div class="banner-caption col-12 col-md-6 col-lg-7 px-3 px-md-5 p-md-0 py-2 py-md-5 ps-md-0 m-md-3 text-dark">
+          <h1 class="mt-md-0 mb-3">Communication without barriers</h1>
+          <h2>Quality sign language interpreting and translation services</h2>
+
+          <a href="#" class="btn btn-arrow my-1 my-lg-2 my-xl-4 me-2 btn-primary"
+            target="">Our brand story</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-img">
+      <div id="banner-video-wrapper" style="position:relative">
+        <video id="asign-video" autoplay muted 
+          src="../assets/img/video.mp4"></video>
+      
+      </div>
+    </div>
+
+
+  </section><!-- ********
+Tabs
+******** -->
+
+  <section id="asign-tabs" class="my-5 my-md-6">
+    <div class="container">
+      <h2 class="tabs-title">Connecting people through sign language</h2>
+      <ul class="nav nav-tabs d-flex justify-content-between mt-4 mb-3" role="tablist">
+        <li class="nav-item" role="presentation">
+          <a class="nav-link active px-2" id="video-remote-interpreting-vri-tab" data-bs-toggle="tab"
+            data-bs-target="#video-remote-interpreting-vri" type="button" role="tab"
+            aria-controls="video-remote-interpreting-vri" aria-selected="true">
+            <img class="tab-icon mb-2"
+              src="../assets/img//asign-service-identifier-vri.png" alt="">
+            <span>Video Remote Interpreting (VRI)</span>
+          </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link px-2" id="in-person-interpreting-tab" data-bs-toggle="tab"
+            data-bs-target="#in-person-interpreting" type="button" role="tab" aria-controls="in-person-interpreting"
+            aria-selected="false" tabindex="-1">
+            <img class="tab-icon mb-2"
+              src="../assets/img/asign-service-identifier-in-person-interpreting.png"
+              alt="">
+            <span>In-person interpreting</span>
+          </a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link px-2" id="translation-tab" data-bs-toggle="tab" data-bs-target="#translation" type="button"
+            role="tab" aria-controls="translation" aria-selected="false" tabindex="-1">
+            <img class="tab-icon mb-2"
+              src="../assets/img/asign-service-identifier-translation.png"
+              alt="">
+            <span>Translation</span>
+          </a>
+        </li>
+      </ul>
+      <div class="tab-content py-5">
+        <div class="tab-pane active show fade" id="video-remote-interpreting-vri" role="tabpanel"
+          aria-labelledby="video-remote-interpreting-vri-tab">
+          <div class="d-flex">
+            <div class="col-12 col-sm-5">
+              <img src="../assets/img/Illustrations-VRI.png"
+                alt="Video Remote Interpreting">
+            </div>
+            <div class="col-12 col-sm-7 px-4 px-md-6 p-5">
+              <img class="tab-icon mb-3 mb-lg-4"
+                src="../assets/img/asign-service-identifier-vri.png"
+                alt="">
+              <h3>Video Remote Interpreting (VRI)</h3>
+              <div>
+                <p>Accessibility and convenience. Connect with an interpreter online using Signet Video Remote
+                  Interpreting (VRI). All you need to get started is a smart device with a camera and reliable internet.
+                  Book an interpreter in advance or access one on-demand.</p>
+              </div>
+              <a class="btn btn-arrow my-1 my-lg-2 my-xl-4 me-2 btn-primary col-6" [routerLink]="['/search']" 
+                >Signet VRI</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="in-person-interpreting" role="tabpanel"
+          aria-labelledby="in-person-interpreting-tab">
+          <div class="d-flex">
+            <div class="col-12 col-sm-5">
+              <img src="../assets/img/Illustrations-In-Person.png"
+                alt="In-Person Interpreting">
+            </div>
+            <div class="col-12 col-sm-7 px-4 px-md-6 p-5">
+              <img class="tab-icon mb-3 mb-lg-4"
+                src="../assets/img/asign-service-identifier-in-person-interpreting.png"
+                alt="">
+              <h3>In-person interpreting</h3>
+              <div>
+                <p>Prefer to connect face-to-face? No problem, we specialize in on-site, in-person interpretation.
+                  Whether it’s a team meeting, conference or community event, we always assign the right interpreters
+                  for the job.</p>
+              </div>
+              <a class="btn btn-arrow my-1 my-lg-2 my-xl-4 me-2 btn-primary col-6" [routerLink]="['/search']" 
+                >Learn more about Signet interpreting services</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="translation" role="tabpanel" aria-labelledby="translation-tab">
+          <div class=" d-flex">
+            <div class="col-12 col-sm-5">
+              <img src="../assets/img/Illustrations-Translation.png"
+                alt="Translation">
+            </div>
+            <div class="col-12 col-sm-7 px-4 px-md-6 p-5 ">
+              <img class="tab-icon mb-3 mb-lg-4"
+                src="../assets/img/asign-service-identifier-translation.png"
+                alt="">
+              <h3>Translation</h3>
+              <div>
+                <p>While interpreting provides accessibility for live interactions, translation deals with finished
+                  content. Translate important policies, documentation and promotional messages from English to Tunisian
+                  Sign Language (TSL) .</p>
+              </div>
+              <a class="btn btn-arrow my-1 my-lg-2 my-xl-4 me-2 btn-primary col-6" [routerLink]="['/search']" 
+                > Signet translation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- ********
+Carousel Block
+******** -->
+
+
+
+<!-- 
+  <div id="CdUgII" class="asign-carousel single  gradient-green carousel slide my-4 my-md-6">
+
+    <div class="carousel-inner container d-flex px-0">
+
+      <div class="carousel-item active">
+        <div class="carousel-item-inner d-flex h-100">
+          <div class="carousel-caption">
+            <h4 class="carousel-caption-title">Asign is a proud Video Interpreter Provider for Canada VRS</h4>
+            <a class="btn-arrow mt-3 mt-sm-4 mt-md-5 float-end"
+              href="https://asign.ca/services/video-relay-service-vrs/" target="">Learn more about Video Relay Service
+              (VRS)</a>
+          </div>
+          <div class="img-wrapper">
+            <img src="./Sign Language Interpreting and Translation _ Asign_files/canada-vrs-square.jpg" class="d-block"
+              alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div> -->
+  
+  <!-- ********
+Text & Image Block
+******** -->
+
+  <section class="container d-flex my-4 my-md-6 asign-txt-img txt-img-right txt-img-count-3 txt-img-color-blue">
+
+    <div class="d-flex">
+      <div class="txt-img-imgs col-md-6 d-flex">
+        <div class="asign-txt-img-wrapper">
+          <img src="../assets/img/colour-squares-blue.jpg" alt="">
+        </div>
+        <div class="asign-txt-img-wrapper">
+          <img src="../assets/img/colour-squares-purple.jpg" alt="">
+        </div>
+        <div class="asign-txt-img-wrapper">
+          <img src="../assets/img/colour-squares.jpg" alt="">
+        </div>
+      </div>
+      <div class="txt-img-txt col-md-6 px-3 px-md-6 d-flex flex-column flex-grow-1 justify-content-center">
+        <h2>Need an interpreter at your fingertips?</h2>
+        <p>Signet VRI On-Demand allows you to connect with a qualified sign language interpreter whenever and wherever
+          you need one.</p>
+
+        <a class="btn btn-arrow my-1 my-lg-2 my-xl-4 me-2 btn-primary col-6" href="/register" target="">
+          Join Us</a>
+      </div>
+    </div>
+
+  </section><!-- ********
+Text & Icon Columns Block
+******** -->
+
+
+  <section class="my-5 my-md-6 asign-txt-icons txt-icons-count-3 asign-gradient  text-white">
+    <div class="colour-scheme-wrapper with-pseudo accent-blue">
+      <div class="container py-5 py-md-6">
+        <div class="d-flex">
+          <div class="col-lg-8 col-md-10">
+            <h2>Sign language for every sector</h2>
+            <h4 class="colour-text">Bring your Deaf customers and employees into the conversation </h4>
+          </div>
+        </div>
+        <div class="d-flex mt-4">
+          <div class="col-12 col-md-6 col-lg-4 d-flex flex-column pe-md-5">
+            <i class="fa-solid fa-building-flag" aria-hidden="true"></i>
+            <h5>Government</h5>
+            <p>Ensure all public-facing communications are understood by the Deaf community. Signet interpreters have
+              extensive experience in government settings and all necessary security clearances.</p>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex flex-column pe-md-5">
+            <i class="fa-solid fa-comment-dollar" aria-hidden="true"></i>
+            <h5>Financial</h5>
+            <p>Provide Deaf customers equal access to their private financial information with Signet VRI and
+              translation.</p>
+
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 d-flex flex-column pe-md-5">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            <h5>Travel &amp; Tourism</h5>
+            <p>Make travel easy. Communicate key messages to Deaf travellers in real-time or via translated messages.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><!-- ********
+Text & Image Block
+******** -->
+
+  <section class="container d-flex my-4 my-md-6 asign-txt-img txt-img-left txt-img-count-3 txt-img-color-blue">
+
+    <div class="d-flex">
+      <div class="txt-img-imgs col-md-6 d-flex">
+        <div class="asign-txt-img-wrapper">
+          <img src="../assets/img/colour-squares-lightblue.jpg" alt="">
+        </div>
+        <div class="asign-txt-img-wrapper">
+          <img src="../assets/img/colour-squares-purple.jpg" alt="">
+        </div>
+        <div class="asign-txt-img-wrapper">
+          <img src="../assets/img/colour-squares-green.jpg" alt="">
+        </div>
+      </div>
+      <div class="txt-img-txt col-md-6 px-3 px-md-6 d-flex flex-column flex-grow-1 justify-content-center">
+        <h2>Work with Signet</h2>
+        <p>At Signet, we’re never done learning. Join a community that learns together, grows together and thrives
+          together.</p>
+        <p>Looking for your next role? Must be a sign. If you’re an TSL-Tunisian Interpreter and are interested in
+          working with Signet, learn more about <a href="#">becoming an
+            Interpreter</a>.</p>
+        <p>Looking for something else? Browse our full list of <a href="#">career
+            opportunities</a>.</p>
+
+      </div>
+    </div>
+
+  </section>
+</main>
+<div class="wrapper bg-dark pt-6 pb-4" id="wrapper-footer-widgets" style="height:100px ;">
+
+  <div class="container mb-3 mb-lg-5">
+
+    <div class="d-flex align-items-center">
+      <div class="col-md-8">
+        <div class="menu-footer-menu-container">
+          <ul style="display:flex;">
+            <li
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-87">
+              <a href="#" aria-current="page">Services</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a
+                    href="#">Video Remote Interpreting</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a
+                    href="#">In-Person Interpreting</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a
+                    href="#">Sign Language Translation</a></li>
+              </ul>
+            </li>
+            <li
+              class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-92">
+              <a href="#" aria-current="page">Company</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-110"><a
+                    href="#">About Signet</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-971"><a
+                    href="#">Our Team</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-970"><a
+                    href="#">Our Story</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-109"><a
+                    href="#">Careers</a></li>
+              </ul>
+            </li>
+            <li               class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-has-children menu-item-92">
+              
+              
+                <h3>Stay Connected</h3>
+                <p>Email: <a href="#">signet@signet.com</a></p>
+                <p>Phone: <a href="#">29108467</a></p>
+                <p>Fax: 9999999</p>
+               
+            
+            </li>
+          </ul>
+          <div class="d-flex justify-content-between">
+
+            <a href="#" class="ps-md-0"><img id="footer-logo"
+                src="../assets/img//logo.png" alt="Asign logo"></a>
+      
+      
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+<footer class=" py-3 bg-dark min-vh-0" id="wrapper-footer-colophon">
+
+  <div class="container">
+
+
+
+    <div class="row pt-3 top-border">
+
+      <div class="col text-center">
+
+        <div class="site-footer" id="colophon">
+
+          <div class="site-info align-items-center">
+
+            <div class="">© Signet. All rights reserved.</div>
+            <div class="menu-colophon-menu-container">
+              <ul class="mb-0 ps-0" style="list-style:none;">
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2052"><a
+                    href="#">Accessibility</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-116"><a
+                    href="#">Privacy Policy</a></li>
+                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-115"><a
+                    href="#">Land Acknowledgement</a></li>
+              </ul>
+            </div>
+          </div><!-- .site-info -->
+
+        </div><!-- #colophon -->
+
+      </div><!--col end -->
+
+    </div><!-- row end -->
+
+  </div><!-- container end -->
+
+</footer><!-- wrapper end -->
+
+
+
+
+

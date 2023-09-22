@@ -1,0 +1,99 @@
+<!-- ******************* The Navbar Area ******************* -->
+<div id="wrapper-navbar" itemscope="" itemtype="#">
+
+  <!-- <a class="skip-link visually-hidden-focusable" href="https://asign.ca/#theme-main">Skip to content</a> -->
+
+
+  <nav class="navbar navbar-expand-lg  navbar-light bg-transparent" aria-label="Main Navigation">
+    <div class="container">
+      <div id="logo-tagline-wrap" class="me-4">
+        <!-- Your site title as branding in the menu -->
+        <a href="#" class="custom-logo-link" rel="home" aria-current="page"><img
+            src="../assets/img/logo.png" class="img"
+            alt="Asign Logo" decoding="async"></a><!-- end custom logo -->
+
+
+        <small id="top-description" class="text-muted d-none d-md-block mt-n2">
+        </small>
+
+
+      </div> <!-- /logo-tagline-wrap -->
+
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    
+        <ul id="menu-main-menu"
+          class="navbar-nav me-auto mb-2 mb-md-0 p-sm-4 p-md-0 container w-100 justify-content-between ">
+          <li id="menu-search-mobile" class="mb-3">
+            <form role="search" method="get" class="menu-search-mobile-form">
+              <label>
+                <span class="screen-reader-text">Search</span>
+                <input type="search" class="search-field" placeholder="Search" value="" name="s">
+              </label>
+              <i id="search-submit" class="fa fa-search" aria-hidden="true" onclick="doMobileSearch()"></i>
+            </form>
+          </li>
+          <li
+            class="mega-menu-parent menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-item nav-item-54 depth-0">
+            <a href="#" aria-label="Solutions" class="nav-link  dropdown-toggle"
+              data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Solutions</a>
+            <div class="mega-menu-wrap w-100 p-sm-4 p-md-0 dropdown-menu depth_0">
+              <ul class="container">
+                <li
+                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-item nav-item-130 depth-1 dropdown-menu dropdown-menu-end">
+                  <a href="#" id="submega-130" aria-label="Services"
+                    class="dropdown-item  dropdown-toggle" data-bs-toggle="" aria-haspopup="true"
+                    aria-expanded="false">Services<br><span class="menu-item-description">Our services bring Canadians
+                      together</span></a>
+                  
+                </li>
+     
+              </ul>
+            </div>
+          </li>
+          <li
+            class="mega-menu-parent menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-item nav-item-53 depth-0">
+            <a href="#" aria-label="Company" class="nav-link  dropdown-toggle" data-bs-toggle=""
+              aria-haspopup="true" aria-expanded="false">Company</a>
+    
+          </li>
+          <li
+            class="mega-menu-parent menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown nav-item nav-item-2071 depth-0">
+            <a href="#" aria-label="Resources" class="nav-link active dropdown-toggle"
+              data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Resources</a>
+ 
+          </li>
+          <li
+            class="menu-btn menu-btn-outline menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-70 depth-0">
+            <a [routerLink]="['/meeting']" class="nav-link ">Video Call</a></li>
+          <li
+            class="menu-btn btn-arrow menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-69 depth-0">
+            <a href="#stay-connected" class="nav-link ">Contact Signet</a></li>
+
+            <li class="menu-btn btn-arrow menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-69 depth-0">
+              <a *ngIf="isUserLoggedIn()" [routerLink]="['/login']" class="nav-link">Login</a>
+              <a *ngIf="!isUserLoggedIn()" [routerLink]="['/login']" (click)="logout()" class="nav-link bg-danger">Log Out</a>
+            </li>
+            <li class="menu-btn menu-btn-outline menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-70 depth-0">
+              <a *ngIf="!isUserLoggedIn()" (click)="profile()" class="nav-link">Profile</a>
+              <!-- <a *ngIf="!isAdmin()" href="/login"class="nav-link bg-danger">translator</a> -->
+            </li>
+            
+            <!-- ... Previous HTML code ... -->
+
+
+
+<!-- ... More HTML code ... -->
+
+        </ul>
+
+      </div> <!-- .collapse -->
+    </div> <!-- .container -->
+  </nav> <!-- .site-navigation -->
+</div><!-- #wrapper-navbar end -->

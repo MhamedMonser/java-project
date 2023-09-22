@@ -1,0 +1,203 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Edit Profile</h4>
+                    </div>
+                    <div class="content">
+                        <form [formGroup]="translatorForm" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                                <label for="gender">Gender <span class="required-input">*</span>:</label>
+                                <div class="gender-container">
+                                    <input class="gender-radio" type="radio" formControlName="gender" name="gender"
+                                        value="male">
+                                    <label class="gender-label">Male</label>
+                                    <input class="gender-radio" type="radio" formControlName="gender" name="gender"
+                                        value="female">
+                                    <label class="gender-label">Female</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Age <span class="required-input">*</span></label>
+                                        <input type="number" id="age" name="age" class="form-control"
+                                            formControlName="age">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('age')?.hasError('required')">Age
+                                            is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('age')?.hasError('min')">Age must
+                                            be at least 10.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('age')?.hasError('max')">Age must
+                                            not exceed 100.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Phone <span class="required-input">*</span></label>
+                                        <input type="tel" id="phone" name="phone" class="form-control"
+                                            formControlName="phone" pattern="[0-9]{8}">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('phone')?.hasError('required')">
+                                            Phone number is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('phone')?.hasError('pattern')">
+                                            Phone number must be 8 digits.</div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="cin">CIN <span class="required-input">*</span>:</label>
+                                        <input type="text" id="cin" name="cin" class="form-control"
+                                            formControlName="cin" required pattern="[0-9]{8}">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('cin')?.hasError('required')">CIN
+                                            is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('cin')?.hasError('pattern')">CIN
+                                            must be 8 digits.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="price">Price <span class="required-input">*</span>:</label>
+                                        <input type="number" id="price" name="price" class="form-control"
+                                            formControlName="price" required>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('price')?.hasError('required')">
+                                            Price is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('price')?.hasError('min')">Price
+                                            must be at least 1.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('price')?.hasError('max')">Price
+                                            must not exceed 9999.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="image">Image:</label>
+                                        <input type="text" id="image" name="image" class="form-control"
+                                            formControlName="image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="street">Street <span class="required-input">*</span>:</label>
+                                        <input type="text" id="street" name="street" class="form-control"
+                                            formControlName="street" required maxlength="255">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('street')?.hasError('required')">
+                                            Street is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('street')?.hasError('maxlength')">
+                                            Street must not exceed 255 characters.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="city">City <span class="required-input">*</span>:</label>
+                                        <input type="text" id="city" name="city" class="form-control"
+                                            formControlName="city" required maxlength="100">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('city')?.hasError('required')">
+                                            City is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('city')?.hasError('maxlength')">
+                                            City must not exceed 100 characters.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="state">State <span class="required-input">*</span>:</label>
+                                        <input type="text" id="state" name="state" class="form-control"
+                                            formControlName="state" required maxlength="100">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('state')?.hasError('required')">
+                                            State is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('state')?.hasError('maxlength')">
+                                            State must not exceed 100 characters.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="postalCode">Postal Code <span
+                                                class="required-input">*</span>:</label>
+                                        <input type="text" id="postalCode" name="postalCode" class="form-control"
+                                            formControlName="postalCode" required pattern="[0-9]{4}">
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('postalCode')?.hasError('required')">
+                                            Postal Code is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('postalCode')?.hasError('pattern')">
+                                            Postal Code must be 4 digits.</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="description">About me <span
+                                                class="required-input">*</span>:</label>
+                                        <textarea id="description" name="description" class="form-control"
+                                            formControlName="description" required minlength="15"
+                                            maxlength="300" style="height: 5%;"></textarea>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('description')?.hasError('required')">
+                                            Description is required.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('description')?.hasError('minlength')">
+                                            Description must be at least 15 characters.</div>
+                                        <div class="error-message"
+                                            *ngIf="formSubmitted && translatorForm.get('description')?.hasError('maxlength')">
+                                            Description must not exceed 300 characters.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Update Profile</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-user">
+                    <div class="image" style="background-color: #935CE9;">
+                    </div>
+                    <div class="content">
+                        <div class="author">
+                                <img class="avatar border-gray" [src]="translator.image" alt="..." />
+                                <h4 class="title mb-3">{{translator.translator.userName}}</h4>
+                        </div>
+                        <p class="description text-center">
+                            {{translator.description}}
+                        </p>
+                    </div>
+                    <hr>
+                    <div class="text-center ">
+                    <div class="text-center card-container">
+                        <a href="#" class="btn btn-simple circle-link"><i class="fa fa-facebook-square"></i></a>
+                        <a href="#" class="btn btn-simple circle-link"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="btn btn-simple circle-link"><i class="fa fa-google-plus-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

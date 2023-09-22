@@ -1,0 +1,49 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Translators List</h4>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table id = "myTable" class="table table-hover table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>email</th>
+                                    <th>cin</th>
+                                    <th>phone</th>
+                                    <th>Address</th>
+                                    <th>Actions</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let translator of translators">
+                                    <td>{{translator.id}}</td>
+                                    <td>{{translator.translator.userName}}</td>
+                                    <td>{{translator.translator.email}}</td>
+                                    <td>{{translator.cin}}</td>
+                                    <td>{{translator.phone}}</td>
+                                    <td>{{translator.address.street}}, {{translator.address.city}},
+                                        {{translator.address.postalCode}}, {{translator.address.state}}</td>
+                                    <td>  <div class="d-flex ">
+                                        <a [routerLink]="['/translators/edit/', translator.id]" class="btn btn-primary m-3">Edit</a>
+                                        <button class="btn btn-danger m-3" (click)="deleteTranslator()">Delete</button>
+
+
+                                        
+                                   </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

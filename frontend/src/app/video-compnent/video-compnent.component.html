@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<div class="row p-5 pt-0">
+  <div class="d-flex ">
+    <div class="col-lg-4 col-sm-9 p-5 mt-4 ">
+
+      <div class="card hovercard">
+        <div class="cardheader">
+
+        </div>
+        <div class="image">
+          <img [src]="translator.image">
+      </div>
+        <div class="info">
+          <h1 class="title">
+            {{translator.translator.userName}}
+          </h1>
+          <div class="desc">{{translator.description}}</div>
+          <div class="desc">{{translator.translator.email}}</div>
+          <div class="desc">{{translator.phone}}</div>
+          <div class="desc">{{translator.address.street}}, {{translator.address.city}},
+            {{translator.address.postalCode}}, {{translator.address.state}}</div>
+
+        </div>
+        <hr>
+        <div class="bottom">
+          <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="btn btn-danger btn-sm" rel="publisher" href="#">
+            <i class="fa fa-google-plus"></i>
+          </a>
+          <a class="btn btn-primary btn-sm" rel="publisher" href="#">
+            <i class="fa fa-facebook"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="button-container col-lg-8 p-3">
+      <div class="card hovercard p-3">
+<h1 class="text-primary p-2">Send information to {{translator.translator.userName}}</h1>
+        <form [formGroup]="videoForm" (ngSubmit)="saveVideo()">
+          <div class="form-group col-12 ">
+            <div class="row">
+              <label for="title" class="col-sm-2">Title <span class="required-input">*</span>:</label>
+              <div class="col-sm-10">
+                <input type="tel" id="title" name="title" class="form-control" formControlName="title">
+              </div>
+            </div>
+          
+          
+            <div class="row pt-3">
+              <label for="description" class="col-sm-2">Description  <span class="required-input">*</span>:</label>
+              <div class="col-sm-10">
+                <input type="tel" id="description" name="description" class="form-control"
+                  formControlName="description">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-12">
+            <video #videoElement autoplay [src]="capturedVideoBlob" class="captured-video"></video>
+          </div>
+         
+          <button class="capture-button" (click)="stopCapture()">Stop Capture</button>
+          <button (click)="startCapture()" class="start-button">
+            <img src="./assets/img/play.png"  alt="Start Capture" class="start-img" />
+          </button>
+          <button type="submit" class="save-button">Save Video</button>
+        </form>
+      </div>
+    </div>
+    <!-- Display the captured video -->
+
+  </div>
+</div>

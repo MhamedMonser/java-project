@@ -1,0 +1,135 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+.container1 {
+    padding: 35px;
+    padding-top: 0px;
+    background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    color: #333333;
+}
+h1{
+    text-align: center;
+    padding: 30px;
+}
+.box-form {
+    margin: 0 auto;
+    width: 80%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: 0 0 20px 6px rgba(9, 11, 111, 0.65);
+}
+
+@media (max-width: 980px) {
+    .box-form {
+        flex-wrap: wrap;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+.box-form .right,
+.box-form .left {
+    padding: 40px 80px;
+    overflow: hidden;
+    width: 60%;
+}
+
+.box-form .right h2 {
+  color: blue;
+  padding-bottom: 30px;
+}
+
+.box-form .right p {
+    font-size: 18px;
+    float: right;
+    color: #B0B3B9;
+}
+
+.box-form .left button {
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-image: linear-gradient(135deg, rgba(89, 97, 249, 0.678) 10%, rgba(89, 97, 249, 0.678) 100%);
+}
+/* Style for form input borders */
+.form-control {
+    margin: 8px 0px;
+    border: 2px solid #cccccc; /* Define your desired border style, color, and width */
+    border-radius: 5px; /* Optional: Add some border radius for rounded corners */
+    padding: 5px; /* Optional: Add some padding for spacing */
+    width: 100%; /* Ensure the input takes the full width of its container */
+    box-sizing: border-box; /* Optional: Include padding and border in the input's total width */
+}
+
+/* Style for focused input */
+.form-control:focus {
+    border-color: #007bff; /* Define the border color for focused input */
+    outline: none; /* Remove the default focus outline if you want */
+    /* Add any additional styles you want for focused input */
+}
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-height: 100px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+/* Custom styles for gender radio buttons and labels */
+.gender-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gender-radio {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #0a0a0a;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.gender-radio:checked {
+    background-color: #007bff;
+}
+
+.gender-label {
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Style for the selected radio button label */
+.gender-radio:checked + .gender-label {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.required-input {
+    color: red;
+    margin-right: 5px; 
+}

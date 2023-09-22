@@ -1,0 +1,96 @@
+
+
+
+
+
+
+  <div class="lcontainer">
+    <!-- partial:index.partial.html -->
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="box-form">
+  
+      
+      
+        <div class="right">
+        <h5>Register</h5>
+        
+        <div class="inputs">
+          
+         
+            
+              <div *ngIf="errorMessages.length != 0">
+                <p class="text-danger">
+                    <span *ngFor="let errMsg of errorMessages">
+                        {{errMsg}} <br>
+                    </span>
+                </p>
+                </div>
+                
+
+                  <label for="profile">Choose Your Profile <span class="required-input">*</span>:</label>
+                  <div class="profile-container mt-2  ">
+                    <input class="profile-radio" type="radio" formControlName="profile" name="profile" value="0" checked>
+                    <label class="profile-label">User</label>
+                  
+                    <input class="profile-radio" type="radio" formControlName="profile" name="profile" value="1">
+                    <label class="profile-label">Translator</label>
+              
+
+                  </div>
+                  <div *ngIf="formSubmitted && registrationForm.get('profile')?.hasError('required')" class="text-danger">Profile is required</div>  
+              <label for="userName">Username</label>
+              <input class="input" type="text" formControlName="userName" >
+              <div *ngIf="formSubmitted && registrationForm.get('userName')?.hasError('required')" class="text-danger">Username is required</div>
+              <div *ngIf="formSubmitted && registrationForm.get('userName')?.hasError('minlength')" class="text-danger">Username must be at least 3 characters</div>
+              <!-- <div *ngIf="formSubmitted && registrationForm.get('userName')?.hasError('pattern')" class="text-danger">Username must contain only letters</div> -->
+           
+        
+           
+              <label for="email">Email</label>
+              <input class="input" type="email" formControlName="email" >
+              <div *ngIf="formSubmitted && registrationForm.get('email')?.hasError('required')" class="text-danger">Email is required</div>
+              <div *ngIf="formSubmitted && registrationForm.get('email')?.hasError('email')" class="text-danger">Please enter a valid email</div>
+              <!-- Display custom error if email already exists -->
+              <div *ngIf="formSubmitted && registrationForm.get('email')?.hasError('emailExists')" class="text-danger">Email already exists</div>
+              <div *ngIf="formSubmitted && registrationForm.get('email')?.pending" class="text-info">Checking email availability...</div>
+           
+            
+            
+        
+            
+              <label for="password">Password</label>
+              <input class="input" type="password" formControlName="password" >
+              <div *ngIf="formSubmitted && registrationForm.get('password')?.hasError('required')" class="text-danger">Password is required</div>
+              <div *ngIf="formSubmitted && registrationForm.get('password')?.hasError('minlength')" class="text-danger">Password must be at least 8 characters</div>
+           
+            
+            
+              <label for="confirm">Confirm Password</label>
+              <input class="input" type="password" formControlName="confirm" >
+              <div *ngIf="formSubmitted && registrationForm.get('confirm')?.hasError('required')" class="text-danger">Confirm Password is required</div>
+              <div *ngIf="formSubmitted && registrationForm.get('confirm')?.hasError('minlength')" class="text-danger">Confirm Password must be at least 8 characters</div>
+              <div *ngIf="formSubmitted && registrationForm.get('confirm')?.hasError('passwordMismatch')" class="text-danger">Passwords do not match</div>
+      
+            
+        
+            <button type="submit" class="btn btn-primary" >Register</button>
+          <br>
+          <p>Already have an account? <a href="/login">Log in</a> here.</p>
+
+        </div>
+    
+      
+  
+      
+    </div>
+    <div class="left">
+      <div class="overlay">
+        <!-- Profile Selection in the Left Section -->
+       <img src="../assets/img/signup.gif" alt="">
+      </div>
+    </div>
+  
+  </div>
+    </form>
+  </div>
+    <!-- partial -->

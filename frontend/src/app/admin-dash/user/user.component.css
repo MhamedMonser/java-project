@@ -1,0 +1,69 @@
+/* Custom styles for gender radio buttons and labels */
+.gender-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gender-radio {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #0a0a0a;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.gender-radio:checked {
+    background-color: #007bff;
+}
+
+.avatar{
+    width: 140px;
+    height: 140px;
+}
+
+/* Style for the selected radio button label */
+.gender-radio:checked+.gender-label {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.required-input {
+    color: red;
+    margin-right: 5px;
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.circle-link {
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    margin: 8px;
+    background-color: white;
+    border: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: 1s ease-out;
+}
+
+.circle-link:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+}
+
+.content {
+    min-height: 200px;
+}

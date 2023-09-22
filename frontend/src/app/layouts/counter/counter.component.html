@@ -1,0 +1,20 @@
+<div class="count-down-timer">
+    <h5>You currently have a scheduled meeting. </h5>
+    <a class="btn btn-success" [routerLink]="['/meeting']">Join Meeting</a>
+    <hr>
+    <p >Next appointment with <span class="text-danger">Jane</span> in</p>
+    <div class="mywrapper">
+        <div class="description">
+            <p>Days</p>
+            <p>Hours</p>
+            <p>Minutes</p>
+            <p>Seconds</p>
+        </div>
+        <div class="times">
+            <p #days></p>
+            <p #hours></p>
+            <p #minutes></p>
+            <p #seconds></p>
+        </div>
+    </div>
+</div>

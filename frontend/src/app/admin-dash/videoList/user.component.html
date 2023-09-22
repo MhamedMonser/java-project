@@ -1,0 +1,9 @@
+
+
+<div class="m-5">
+<ul class="video-list">
+  <li *ngFor="let video of videos" class="video-item">
+    <video [src]="video.videoUrl" controls class="video-player"></video>
+  </li>
+</ul>
+</div>
